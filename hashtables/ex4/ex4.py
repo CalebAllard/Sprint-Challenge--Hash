@@ -1,10 +1,27 @@
+
+cache = {}
 def has_negatives(a):
+    current = None
+    result = []
+    for i in a:
+        if i < 0: 
+            cache[i] = i
+    for i in a:
+        if i > 0:
+            if -i in cache:
+                result.append(i)
+            else:
+    
+                continue
+    # print(a)
+    print(cache)
+    print(result)
+    return result            
 
     """
     YOUR CODE HERE
     """
-
-    return result
+    
 
 
 if __name__ == "__main__":
