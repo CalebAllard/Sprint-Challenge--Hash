@@ -1,5 +1,6 @@
 def intersection(arrays):
-
+    for i in range(0,len(arrays)):
+        
     """
     YOUR CODE HERE
     """
