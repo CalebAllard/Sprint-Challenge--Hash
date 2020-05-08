@@ -4,9 +4,22 @@ class Ticket:
         self.source = source
         self.destination = destination
 
-
+cache = {}
 def reconstruct_trip(tickets, length):
-    
+    for ticket in tickets:
+        cache[ticket.source] = ticket.destination
+    route = []
+    route.append(cache["NONE"])
+    current_ticket = cache["NONE"]
+    while len(route) < length:
+        if current_ticket in cache:
+            route.append(cache[current_ticket])
+            current_ticket = cache[current_ticket]
+    return route
+
+        
+
+   
     """
     YOUR CODE HERE
     """
