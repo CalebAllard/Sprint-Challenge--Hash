@@ -1,6 +1,6 @@
 
-cache = {}
 def has_negatives(a):
+    cache = {}
     current = None
     result = []
     for i in a:
